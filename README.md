@@ -13,14 +13,20 @@ Resolve Angular 2 Routes for Context
 
 
 ```
-// ng routes
+src/
+ ├──about/
+ |    └──index.ts // Component
+ |
+ └──index.ts // routes
+
+// ngRoutes from .routes in index.ts
 [
   { path: 'about', component: './about#About' }
 ]
 
-// context map
+// context map created
 {
-  './about': '../../about'
+  './about': './app/about'
 }
 ```
 
