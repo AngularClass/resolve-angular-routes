@@ -21,7 +21,7 @@ function resolveNgRoute(srcPath, config, defaultFile, resolver) {
     .map(function(file) {
       var filePath = path.join(srcPath, file);
       if (fs.statSync(filePath).isDirectory()) {
-        return getDirectories(filePath, config, defaultFile, resolver);
+        return resolveNgRoute(filePath, config, defaultFile, resolver);
       }
       resolver(filePath)
         .filter(function(route) {
