@@ -5,6 +5,9 @@ Resolve Angular 2 Routes for Context
 `npm install --save-dev @angularclass/resolve-angular-routes`
 
 ```es6
+import 'core-js/es6';
+import 'core-js/es7/reflect';
+
 const resolveNgRoute = require('@angularclass/resolve-angular-routes');
 // root helper
 module.exports = {
