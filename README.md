@@ -9,25 +9,38 @@ ___
 # resolve-angular-routes
 Resolve Angular 2 Routes for Context
 
-
 `npm install --save-dev @angularclass/resolve-angular-routes`
+
+
+```
+// ng routes
+[
+  { path: 'about', component: './about#About' }
+]
+
+// context map
+{
+  './about': '../../about'
+}
+```
 
 ```es6
 import 'core-js/es6';
 import 'core-js/es7/reflect';
 
 const resolveNgRoute = require('@angularclass/resolve-angular-routes');
-// root helper
+
 module.exports = {
   // etc
   plugins: [
     new ContextReplacementPlugin(
       /angular\/core\/src\/linker/,
-      root('./src'),
+      root('./src'), // root() __dirname helper
       resolveNgRoute(root('./src'))
     ),
   ]
   // etc
+}
 ```
 
 ___
