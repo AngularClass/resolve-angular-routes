@@ -1,0 +1,20 @@
+{
+  "name": "@angularclass/resolve-angular-routes",
+  "version": "1.0.0",
+  "description": "Resolve Angular 2 Routes for Context ",
+  "author": "PatrickJS <patrick@angularclass.com>",
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "scripts": {
+  },
+  "devDependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngularClass/resolve-angular-routes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AngularClass/resolve-angular-routes/issues"
+  },
+  "homepage": "https://github.com/AngularClass/resolve-angular-routes#readme"
+}
