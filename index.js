@@ -37,5 +37,6 @@ function resolveNgRoute(srcPath, config, defaultFile, resolver) {
   return config;
 }
 resolveNgRoute.default = resolveNgRoute
+resolveNgRoute.resolveNgRoute = resolveNgRoute;
 
 module.exports = resolveNgRoute;
