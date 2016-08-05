@@ -25,9 +25,9 @@ function resolveNgRoute(srcPath, config, defaultFile, resolver) {
       }
       resolver(filePath)
         .filter(function(route) {
-          return route.component && typeof route.component === 'string';
+          return (route.component && typeof route.component === 'string') || (route.loadChildren && typeof route.loadChildren === 'string');
         })
-        .map(function(route) { return route.component.split('#')[0] })
+        .map(function(route) { return (route.component || route.loadChildren).split('#')[0] })
         .map(function(componentPath) {
           //  create context map
           config[componentPath] = path.join(srcPath, componentPath);
