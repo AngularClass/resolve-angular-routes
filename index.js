@@ -3,10 +3,8 @@ var path = require('path');
 
 function routesResolver(filePath) {
   var ngModule = require(filePath).default || require(filePath);
-  if (ngModule.routes && ngModule.routes.length) {
-    return ngModule.routes;
-  }
-  return [];
+  var routes = ngModule.routes || require(filePath).routes || [];
+  return routes;
 }
 
 function resolveNgRoute(srcPath, config, defaultFile, resolver) {
