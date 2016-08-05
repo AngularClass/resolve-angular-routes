@@ -1,6 +1,6 @@
 {
   "name": "@angularclass/resolve-angular-routes",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Resolve Angular 2 Routes for Context ",
   "author": "PatrickJS <patrick@angularclass.com>",
   "license": "Apache-2.0",
