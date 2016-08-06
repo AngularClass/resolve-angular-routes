@@ -15,13 +15,16 @@ Resolve Angular 2 Routes for Context
 ```
 src/
  ├──about/
- |    └──index.ts // Component
+ |    └──index.ts  // NgModule or Component with either
  |
  └──index.ts // routes
 
-// ngRoutes from .routes in index.ts
+// the router resolve will look for these static properties
+// 'routes', 'ROUTER_CONFIG', or 'ROUTE_CONFIG'
+
+// ngRoutes from index.ts
 [
-  { path: 'about', component: './about#About' }
+  { path: 'about', component: './about' }
 ]
 
 // context map created
