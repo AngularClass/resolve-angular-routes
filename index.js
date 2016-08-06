@@ -2,8 +2,8 @@ var fs = require('fs');
 var path = require('path');
 
 function routesResolver(filePath) {
-  var ngModule = require(filePath).default;
   var file = require(filePath);
+  var ngModule = file && file.default || {};
   var ngRoutes = ngModule.routes ||
                      file.routes ||
           ngModule.ROUTER_CONFIG ||
