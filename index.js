@@ -32,7 +32,7 @@ function resolveNgRoute(srcPath, config, defaultFile, resolver) {
       resolver(filePath)
         .filter(function(route) {
           var filePath = route.component || route.loadChildren;
-          return filePath && typeof route === 'string';
+          return typeof filePath === 'string';
         })
         .map(function(route) {
           var filePath = route.component || route.loadChildren;
