@@ -1,6 +1,6 @@
 {
   "name": "@angularclass/resolve-angular-routes",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Resolve Angular 2 Routes for Webpack Context creation",
   "author": "PatrickJS <patrick@angularclass.com>",
   "license": "Apache-2.0",

@@ -2,15 +2,23 @@ var fs = require('fs');
 var path = require('path');
 
 function routesResolver(filePath) {
-  var file = require(filePath);
-  var ngModule = file && file.default || {};
-  var ngRoutes = ngModule.routes ||
-                     file.routes ||
-          ngModule.ROUTER_CONFIG ||
-              file.ROUTER_CONFIG ||
-           ngModule.ROUTE_CONFIG ||
-               file.ROUTE_CONFIG ||
-                                 [];
+  var file;
+  var ngModule;
+  var ngRoutes = [];
+
+  try {
+    file = require(filePath);
+    ngModule = file && file.default || {};
+    ngRoutes = ngModule.routes ||
+                       file.routes ||
+            ngModule.ROUTER_CONFIG ||
+                file.ROUTER_CONFIG ||
+             ngModule.ROUTE_CONFIG ||
+                 file.ROUTE_CONFIG ||
+                                   [];
+  } catch (e) {
+    console.warn('ResolveNgRoutes', filePath)
+  }
   return ngRoutes;
 }
 
